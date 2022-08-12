@@ -1,10 +1,12 @@
 {
   "name": "github_profile_analyzer",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "author": "tomoyahiroe <tomoya4creative@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@octokit/graphql": "^5.0.0"
+    "@octokit/graphql": "^5.0.0",
+    "csv-writer": "^1.6.0"
   }
 }
