@@ -8,9 +8,6 @@ const graphqlWithAuth = graphql.defaults({
   },
 });
 
-// totalRepositoryContributions: レポジトリ数
-// promaryLanguage.name: 主要言語
-//
 const QUERY = `
 query getUser {
   user(login: "tomoyahiroe") {
@@ -65,7 +62,6 @@ query getUser {
     data.contributionsCollection.contributionCalendar.totalContributions;
   const amountOfRepository =
     data.contributionsCollection.totalRepositoryContributions;
-  // const primaryLanguage = data.repositories.edges[4].node.primaryLanguage.name;
   console.log({
     username: username,
     amountOfRepository: amountOfRepository,
@@ -77,28 +73,3 @@ query getUser {
     sumContributions: sumContributions,
   };
 });
-// })().then((data) => {
-//   const username = data.login;
-//   const amountOfRepository =
-//     data.contributionsCollection.totalRepositoryContributions;
-//   const primaryLanguage = data.repositories.edges.languages;
-//   console.log({
-//     username: username,
-//     amountOfRepository: amountOfRepository,
-//     primaryLanguage: primaryLanguage,
-//   });
-//   return {
-//     username: username,
-//     amountOfRepository: amountOfRepository,
-//     primaryLanguage: primaryLanguage,
-//   };
-// });
-
-// const reader = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-// });
-// reader.question("INPUT TARGET USERNAME\n", (inS) => {
-//   reader.close();
-//   getInfo(inS);
-// });
