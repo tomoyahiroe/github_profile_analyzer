@@ -19,27 +19,6 @@ query getUser {
       }
       totalRepositoryContributions
     }
-    repositories(last: 5) {
-      edges {
-        node {
-          id
-          name
-          languages(first: 1) {
-            edges {
-              node {
-                id
-                name
-              }
-              size
-            }
-            totalSize
-          }
-          primaryLanguage {
-            name
-          }
-        }
-      }
-    }
   }
 }
 `;
