@@ -16,7 +16,7 @@ query getUser {
   user(login: "tomoyahiroe") {
     login
     name
-    contributionsCollection {
+    contributionsCollection(to: "2021-12-31T09:23:59", from: "2021-01-01T09:00:00") {
       contributionCalendar {
         totalContributions
       }
