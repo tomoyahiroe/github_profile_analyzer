@@ -65,17 +65,16 @@ query getUser {
     data.contributionsCollection.contributionCalendar.totalContributions;
   const amountOfRepository =
     data.contributionsCollection.totalRepositoryContributions;
-  const primaryLanguage = data.repositories.edges[0].node.primaryLanguage.name;
+  // const primaryLanguage = data.repositories.edges[4].node.primaryLanguage.name;
   console.log({
     username: username,
     amountOfRepository: amountOfRepository,
-    primaryLanguage: primaryLanguage,
     sumContributions: sumContributions,
   });
   return {
     username: username,
     amountOfRepository: amountOfRepository,
-    primaryLanguage: primaryLanguage,
+    sumContributions: sumContributions,
   };
 });
 // })().then((data) => {
