@@ -58,13 +58,11 @@ query getUser {
 })().then((data) => {
   const jsonData = JSON.stringify(data, null, 2);
   console.log(jsonData);
-  // const trimedData = jsonData.trim();
-  // const parsedData = JSON.parse(trimedData);
-  // console.log(parsedData);
-  // for (let i; i < parsedData.length; i++) {
-  //   console.log(parsedData[i]);
-  // }
+
+  //jsonオブジェクトから、情報を抜き取る。
   const username = data.login;
+  const sumContributions =
+    data.contributionsCollection.contributionCalendar.totalContributions;
   const amountOfRepository =
     data.contributionsCollection.totalRepositoryContributions;
   const primaryLanguage = data.repositories.edges[0].node.primaryLanguage.name;
@@ -72,6 +70,7 @@ query getUser {
     username: username,
     amountOfRepository: amountOfRepository,
     primaryLanguage: primaryLanguage,
+    sumContributions: sumContributions,
   });
   return {
     username: username,
